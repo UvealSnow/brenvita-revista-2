@@ -1,0 +1,72 @@
+/* 
+	BrenVita style framework by @UvealSnow
+	Nuva.Rocks, All rights reserved
+*/
+/* CSS reset by @UvealSnow
+*/
+* { -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; width: auto; height: auto; text-decoration: none; font-weight: normal; background: none; border: medium none; border-spacing: 0; text-indent: 0; box-sizing: border-box; }
+
+body { font-family: 'Gotham'; }
+
+.hidden { display: none; opacity: 0; }
+
+@font-face { font-family: 'Gotham'; src: url("fonts/GothamBold.eot"); src: url("fonts/GothamBold.eot?#iefix") format("embedded-opentype"), url("fonts/GothamBold.woff") format("woff"), url("fonts/GothamBold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'Gotham'; src: url("fonts/Gotham-Black.eot"); src: url("fonts/Gotham-Black.eot?#iefix") format("embedded-opentype"), url("fonts/Gotham-Black.woff") format("woff"), url("fonts/Gotham-Black.ttf") format("truetype"); font-weight: 900; font-style: normal; }
+@font-face { font-family: 'Gotham'; src: url("fonts/GothamMedium.eot"); src: url("fonts/GothamMedium.eot?#iefix") format("embedded-opentype"), url("fonts/GothamMedium.woff") format("woff"), url("fonts/GothamMedium.ttf") format("truetype"); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Gotham'; src: url("fonts/GothamMedium-Italic.eot"); src: url("fonts/GothamMedium-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamMedium-Italic.woff") format("woff"), url("fonts/GothamMedium-Italic.ttf") format("truetype"); font-weight: 500; font-style: italic; }
+@font-face { font-family: 'Gotham'; src: url("fonts/GothamLight.eot"); src: url("fonts/GothamLight.eot?#iefix") format("embedded-opentype"), url("fonts/GothamLight.woff") format("woff"), url("fonts/GothamLight.ttf") format("truetype"); font-weight: 300; font-style: normal; }
+@font-face { font-family: 'Gotham'; src: url("fonts/GothamLight-Italic.eot"); src: url("fonts/GothamLight-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/GothamLight-Italic.woff") format("woff"), url("fonts/GothamLight-Italic.ttf") format("truetype"); font-weight: 300; font-style: italic; }
+@font-face { font-family: 'Ardelaney'; src: url("fonts/ARDELANEY.eot"); src: url("fonts/ARDELANEY.eot?#iefix") format("embedded-opentype"), url("fonts/ARDELANEY.woff") format("woff"), url("fonts/ARDELANEY.ttf") format("truetype"); font-weight: 100; font-style: normal; }
+.strongPink { background-color: #fc668d; fill: #fc668d; color: #fc668d; }
+
+.pastelPink { background-color: #fdb2c6; fill: pastelPink; color: #fdb2c6; }
+
+.blue { background-color: #a5ecdd; fill: #a5ecdd; color: #a5ecdd; }
+
+.lightBlue { background-color: #f0fbf8; fill: #f0fbf8; color: #f0fbf8; }
+
+.darkBlue { background-color: #0b1631; fill: #0b1631; color: #0b1631; }
+
+.gray { background-color: #5e6577; fill: #5e6577; color: #5e6577; }
+
+.purple { background-color: #753bbd; fill: #753bbd; color: #753bbd; }
+
+.gold { background-color: #ffb549; fill: #ffb549; color: #ffb549; }
+
+.yellow { background-color: #ffd700; fill: #ffd700; color: #ffd700; }
+
+.green { background-color: #72d54a; fill: #72d54a; color: #72d54a; }
+
+[container] { height: 100%; overflow-y: hidden; }
+
+.fill-height { height: 100vh; width: auto !important; }
+
+[background] { position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; background: #0b1631; /* Old browsers */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b1631', endColorstr='#125d72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+[background] img { width: 100%; }
+
+[cover] { position: fixed; top: 0%; width: 100vw; overflow: hidden; transition: top .6s; z-index: 1; }
+[cover] div[opener] { height: 80px; width: 120px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+[cover] div[opener] span { color: white; display: block; margin: 0 auto; text-align: center; width: 70%; font-weight: lighter; position: relative; top: 15px; z-index: -1; }
+[cover] div[opener] img { display: block; margin: 0 auto; width: 60%; }
+[cover] h1 { position: absolute; top: 50px; left: 25px; width: 80%; font-size: 40px; background-color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: white; }
+
+[cover].out { top: -100%; }
+
+[menu] { overflow-y: hidden; overflow-x: scroll; position: absolute; height: 40vh; width: 1630px; }
+[menu] a { color: white; margin: 15px 0 15px 15px; }
+[menu] a:last-of-type { margin-right: 15px; }
+[menu] a[main] { width: 280px; height: 280px; display: inline-block; position: relative; vertical-align: top; font-size: 30px; }
+[menu] a[main] span { position: absolute; display: block; margin: 0 auto; top: 50%; transform: translateY(-50%); width: 100%; text-align: center; }
+[menu] a[subs] { position: relative; display: inline-block; width: 50px; height: 280px; }
+[menu] a[subs] span { position: absolute; padding: 0 10px; width: calc(40vh - 15px); display: block; transform: rotate(90deg); transform-origin: left top 0; left: 33px; }
+
+[content] { min-height: 100vh; background-color: #f0fbf8; z-index: -999; }
+[content] h2 { font-size: 30px; color: #fc668d; padding: 0 15px; }
+[content] p, [content] ul, [content] li { font-size: 17px; padding: 0 15px; margin: 25px 0; line-height: 1.8; font-weight: lighter; }
+[content] p:last-of-type { margin-bottom: 0; padding-bottom: 25px; }
+[content] p[quote] { color: #fc668d; text-align: center; font-style: italic; padding: 25px; font-size: 20px; }
+[content] p[note] { color: blacK; line-height: 1; font-size: 15px; }
+[content] i { background-color: transparent; font-weight: lighter; }
+[content] hr { height: 3px; background-color: #fc668d; margin-bottom: 25px; }
+[content] a[button] { display: block; width: 250px; background-color: #753bbd; color: white; border-radius: 15px; padding: 25px 35px; text-align: center; margin: 75px auto 0 auto; position: relative; top: -50px; }
+[content] .third { height: 40vh; }

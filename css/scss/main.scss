@@ -1,0 +1,191 @@
+/* 
+	BrenVita style framework by @UvealSnow
+	Nuva.Rocks, All rights reserved
+*/
+
+@import 'reset';
+@import 'fonts';
+@import 'colors';
+@import 'animations';
+
+// Reusable
+	[container] {
+		height: 100%;
+		overflow-y: hidden;
+	}
+	.fill-height {
+		height: 100vh;
+		width: auto !important;
+	}
+	[background] {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background: rgb(11,22,49); /* Old browsers */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b1631', endColorstr='#125d72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		img {
+			width: 100%;
+		}
+	}
+	[cover] {
+		position: fixed;
+		top: 0%;
+		width: 100vw;
+		overflow: hidden;
+		transition: top .6s;
+		z-index: 1;
+		div[opener] {
+			height: 80px;
+			width: 120px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			span {
+				color: white;
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				width: 70%;
+				font-weight: lighter;
+				position: relative;
+				top: 15px;
+				z-index: -1;
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 60%;
+			}
+		}
+		h1 {
+			position: absolute;
+			top: 50px;
+			left: 25px;
+			width: 80%;
+			font-size: 40px;
+			background-color: transparent;
+			-webkit-text-stroke-width: 1px;
+   			-webkit-text-stroke-color: white;
+		}
+	}
+	[cover].out {
+		top: -100%;
+	}
+
+// Main cover
+	[menu] {
+		overflow-y: hidden;
+		overflow-x: scroll; 
+		position: absolute;
+		// top: calc(60vh - 15px);
+		height: 40vh;
+		width: 1630px; // this value must be recalculated depending on how many anchors are being placed
+		a {
+			color: white;
+			margin: 15px 0 15px 15px;
+		}
+		a:last-of-type {
+			margin-right: 15px;
+		}
+		a[main] {
+			width: 280px;
+			height: 280px;
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+			font-size: 30px;
+			span {
+				position: absolute;
+				display: block;
+				margin: 0 auto;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+				text-align: center;
+			}
+		}
+		a[subs] {
+			position: relative;
+			display: inline-block;
+			width: 50px; 
+			height: 280px;
+			span {
+				position: absolute;
+				padding: 0 10px;
+				width: calc(40vh - 15px);
+				display: block;
+				transform: rotate(90deg);
+				transform-origin: left top 0;
+				left: 33px;
+			}
+		}
+	}
+
+// Articles
+	[content] {
+		min-height: 100vh;
+		background-color: $lightBlue;
+		z-index: -999;
+		h2 {
+			font-size: 30px;
+			color: $strongPink;
+			padding: 0 15px;
+		}
+		p, ul, li {
+			font-size: 17px;
+			padding: 0 15px;
+			margin: 25px 0;
+			line-height: 1.8;
+			font-weight: lighter;
+		}
+		p:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 25px;
+		}
+		p[quote] {
+			color: $strongPink;
+			text-align: center;
+			font-style: italic;
+			padding: 25px;
+			font-size: 20px;
+		}
+		p[note] {
+			color: blacK;
+			line-height: 1;
+			font-size: 15px;
+		}
+		i {
+			background-color: transparent;
+			font-weight: lighter;
+		}
+		hr {
+			height: 3px;
+			background-color: $strongPink;
+			margin-bottom: 25px;
+		}
+		a[button] {
+			display: block;
+			width: 250px;
+			background-color: $purple;
+			color: white;
+			border-radius: 15px;
+			padding: 25px 35px;
+			text-align: center;
+			margin: 75px auto 0 auto;
+			position: relative;
+			top: -50px;
+		}
+		.third {
+			height: 40vh; 
+		}
+	}
+
+
+
+
+
+
+
